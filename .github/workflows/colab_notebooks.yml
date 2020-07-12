@@ -2,6 +2,7 @@ name: Prepare notebooks for the Google Colab environment
 
 on:
   push:
+    branches: master
 
 jobs:
   build:
