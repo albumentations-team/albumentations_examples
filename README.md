@@ -13,7 +13,8 @@
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/serialization.ipynb) [serialization.ipynb](notebooks/serialization.ipynb). How to save and load parameters of an augmentation pipeline.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/showcase.ipynb) [showcase.ipynb](notebooks/showcase.ipynb). Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/tensorflow-example.ipynb) [tensorflow-example.ipynb](notebooks/tensorflow-example.ipynb). Using Albumentations with Tensorflow.
-
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/pytorch_classification.ipynb) [pytorch_classification.ipynb](notebooks/pytorch_classification.ipynb). PyTorch and Albumentations for image classification.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/colab/pytorch_semantic_segmentation.ipynb) [pytorch_semantic_segmentation.ipynb](notebooks/pytorch_semantic_segmentation.ipynb). PyTorch and Albumentations for semantic segmentation.
 
 
 # Usage examples
