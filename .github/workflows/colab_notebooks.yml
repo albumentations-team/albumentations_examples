@@ -22,6 +22,8 @@ jobs:
       - name: Install the required Python libraries
         run: pip install nbformat
       - name: Save the original commit message
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run: echo ::set-env name=COMMIT_MESSAGE::$(git log -1  --pretty='%s')
       - name: Preprocess notebooks
         run: python tools/prepare_notebooks_for_colab.py --input-dir notebooks --output-dir ${GITHUB_WORKSPACE}/colab
