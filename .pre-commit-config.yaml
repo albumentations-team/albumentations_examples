@@ -1,14 +1,74 @@
+ci:
+  autofix_commit_msg: |
+    [pre-commit.ci] auto fixes from pre-commit.com hooks
+
+    for more information, see https://pre-commit.ci
+  autofix_prs: true
+  autoupdate_branch: ''
+  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_schedule: weekly
+  skip: [ ]
+  submodules: false
+
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
     hooks:
-    - id: flake8
-    - id: trailing-whitespace
-    - id: check-yaml
-    - id: end-of-file-fixer
-    - id: requirements-txt-fixer
--   repo: https://github.com/psf/black
-    rev: 19.3b0
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: detect-private-key
+      - id: forbid-new-submodules
+      - id: forbid-submodules
+      - id: mixed-line-ending
+      - id: destroyed-symlinks
+      - id: fix-byte-order-marker
+      - id: check-json
+      - id: check-yaml
+        args: [ --unsafe ]
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: requirements-txt-fixer
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.15.0
     hooks:
-    -   id: black
-        args: [--config=black.toml]
+    - id: pyupgrade
+      args: ["--py38-plus"]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: [ "--profile", "black" ]
+  - repo: https://github.com/psf/black
+    rev: 24.2.0
+    hooks:
+      - id: black
+        args: [ --config=pyproject.toml ]
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.10.0
+    hooks:
+      - id: python-check-mock-methods
+      - id: python-use-type-annotations
+      - id: python-check-blanket-noqa
+      - id: python-use-type-annotations
+      - id: text-unicode-replacement-char
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        exclude: ^setup.py
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        files: ^albumentations/
+        additional_dependencies: [ types-PyYAML]
+        args:
+          [ --config-file=pyproject.toml ]
