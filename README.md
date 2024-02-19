@@ -6,26 +6,26 @@ If you found errors in the notebooks, please create:
 or
 2. Submit an issue to the [main repository of Albumentations](https://github.com/albumentations-team/albumentations/issues)
 
-- [example.ipynb](notebooks/example.ipynb). Defining a simple augmentation pipeline for image augmentation.
-- [example_16_bit_tiff.ipynb](notebooks/example_16_bit_tiff.ipynb). Working with non-8-bit images.
-- [example_bboxes.ipynb](notebooks/example_bboxes.ipynb). Using Albumentations to augment bounding boxes for object detection tasks.
-- [example_bboxes2.ipynb](notebooks/example_bboxes2.ipynb). How to use Albumentations for detection tasks if you need to keep all bounding boxes.
-- [example_kaggle_salt.ipynb](notebooks/example_kaggle_salt.ipynb). Using Albumentations for a semantic segmentation task.
-- [example_keypoints.ipynb](notebooks/example_keypoints.ipynb). Using Albumentations to augment keypoints.
-- [example_multi_target.ipynb](notebooks/example_multi_target.ipynb). Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints.
-- [example_weather_transforms.ipynb](notebooks/example_weather_transforms.ipynb). Weather augmentations in Albumentations.
-- [migrating_from_torchvision_to_albumentations.ipynb](notebooks/migrating_from_torchvision_to_albumentations.ipynb). Migrating from torchvision to Albumentations.
-- [replay.ipynb](notebooks/replay.ipynb). Debugging an augmentation pipeline with ReplayCompose.
-- [serialization.ipynb](notebooks/serialization.ipynb). How to save and load parameters of an augmentation pipeline.
-- [showcase.ipynb](notebooks/showcase.ipynb). Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
-- [tensorflow-example.ipynb](notebooks/tensorflow-example.ipynb). Using Albumentations with Tensorflow.
-- [pytorch_classification.ipynb](notebooks/pytorch_classification.ipynb). PyTorch and Albumentations for image classification.
-- [pytorch_semantic_segmentation.ipynb](notebooks/pytorch_semantic_segmentation.ipynb). PyTorch and Albumentations for semantic segmentation.
-- [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example.ipynb) [example.ipynb](notebooks/example.ipynb). Defining a simple augmentation pipeline for image augmentation.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_16_bit_tiff.ipynb) [example_16_bit_tiff.ipynb](notebooks/example_16_bit_tiff.ipynb). Working with non-8-bit images.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_bboxes.ipynb) [example_bboxes.ipynb](notebooks/example_bboxes.ipynb). Using Albumentations to augment bounding boxes for object detection tasks.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_bboxes2.ipynb) [example_bboxes2.ipynb](notebooks/example_bboxes2.ipynb). How to use Albumentations for detection tasks if you need to keep all bounding boxes.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_kaggle_salt.ipynb) [example_kaggle_salt.ipynb](notebooks/example_kaggle_salt.ipynb). Using Albumentations for a semantic segmentation task.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_keypoints.ipynb) [example_keypoints.ipynb](notebooks/example_keypoints.ipynb). Using Albumentations to augment keypoints.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_multi_target.ipynb) [example_multi_target.ipynb](notebooks/example_multi_target.ipynb). Applying the same augmentation with the same parameters to multiple images, masks, bounding boxes, or keypoints.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_weather_transforms.ipynb) [example_weather_transforms.ipynb](notebooks/example_weather_transforms.ipynb). Weather augmentations in Albumentations.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/migrating_from_torchvision_to_albumentations.ipynb) [migrating_from_torchvision_to_albumentations.ipynb](notebooks/migrating_from_torchvision_to_albumentations.ipynb). Migrating from torchvision to Albumentations.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/replay.ipynb) [replay.ipynb](notebooks/replay.ipynb). Debugging an augmentation pipeline with ReplayCompose.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/serialization.ipynb) [serialization.ipynb](notebooks/serialization.ipynb). How to save and load parameters of an augmentation pipeline.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/showcase.ipynb) [showcase.ipynb](notebooks/showcase.ipynb). Showcase. Cool augmentation examples on diverse set of images from various real-world tasks.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/tensorflow-example.ipynb) [tensorflow-example.ipynb](notebooks/tensorflow-example.ipynb). Using Albumentations with Tensorflow.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/pytorch_classification.ipynb) [pytorch_classification.ipynb](notebooks/pytorch_classification.ipynb). PyTorch and Albumentations for image classification.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/pytorch_semantic_segmentation.ipynb) [pytorch_semantic_segmentation.ipynb](notebooks/pytorch_semantic_segmentation.ipynb). PyTorch and Albumentations for semantic segmentation.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_xymasking.ipynb) [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
 
 ## Usage examples
 
-For detailed examples see [notebooks](https://github.com/albumentations-team/albumentations_examples/tree/master/notebooks).
+For detailed examples see [notebooks](https://github.com/albumentations-team/albumentations_examples/tree/main/notebooks).
 
 ```python
 from albumentations import (
