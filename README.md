@@ -22,6 +22,7 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/pytorch_classification.ipynb) [pytorch_classification.ipynb](notebooks/pytorch_classification.ipynb). PyTorch and Albumentations for image classification.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/pytorch_semantic_segmentation.ipynb) [pytorch_semantic_segmentation.ipynb](notebooks/pytorch_semantic_segmentation.ipynb). PyTorch and Albumentations for semantic segmentation.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_xymasking.ipynb) [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_mixup.ipynb) [mixup.ipynb](notebooks/example_mixup.ipynb). How to apply [MixUp](https://albumentations.ai/docs/api_reference/augmentations/mixing).
 
 ## Usage examples
 
