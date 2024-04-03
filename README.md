@@ -143,7 +143,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![VerticalFlip image](images/augs_examples/VerticalFlip.jpg)
 
-[HorizontalFlip]([HorizontalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.VerticalFlip))
+[HorizontalFlip]([HorizontalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.HorizontalFlip))
 --------------
 
 1. Original image
