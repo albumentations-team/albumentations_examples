@@ -24,6 +24,7 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_xymasking.ipynb) [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_mixup.ipynb) [mixup.ipynb](notebooks/example_mixup.ipynb). How to apply [MixUp](https://albumentations.ai/docs/api_reference/augmentations/mixing).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_chromatic_aberration.ipynb) [example_chromatic_aberration.ipynb](notebooks/example_chromatic_aberration.ipynb). How to apply ChromaticAberration.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
 
 ## Usage examples
 
@@ -49,7 +50,7 @@ def strong_aug(p=0.5):
             MedianBlur(blur_limit=3, p=0.1),
             Blur(blur_limit=3, p=0.1),
         ], p=0.2),
-        ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.2, rotate_limit=45, p=0.2),
+        Affine(translate_percent=0.0625, scale=(0.8, 1.2), rotate_limit=(-45, 45), p=0.2),
         OneOf([
             OpticalDistortion(p=0.3),
             GridDistortion(p=0.1)
@@ -72,7 +73,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ## Augmentations examples
 
-[MultiplicativeNoise]([MultiplicativeNoise](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.MultiplicativeNoise))
+[MultiplicativeNoise]([MultiplicativeNoise](https://albumentations.ai/docs/api_reference/full_reference/?h=multiplicativenoise#albumentations.augmentations.transforms.MultiplicativeNoise))
 -------------------
 
 1. Original image
@@ -84,7 +85,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![MultiplicativeNoise image](images/augs_examples/MultiplicativeNoise.jpg)
 
-[ToSepia]([ToSepia](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ToSepia))
+[ToSepia]([ToSepia](https://albumentations.ai/docs/api_reference/full_reference/?h=tosepia#albumentations.augmentations.transforms.ToSepia))
 -------
 
 1. Original image
@@ -92,7 +93,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ToSepia image](images/augs_examples/ToSepia.jpg)
 
-[ChannelDropout]([ChannelDropout](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ChannelDropout))
+[ChannelDropout]([ChannelDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/?h=channeld#channeldropout-augmentation-augmentationsdropoutchannel_dropout))
 --------------
 
 1. Original image
@@ -107,7 +108,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ChannelDropout image](images/augs_examples/ChannelDropout.jpg)
 
-[ChannelShuffle]([ChannelShuffle](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ChannelShuffle))
+[ChannelShuffle]([ChannelShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=channelshu#albumentations.augmentations.transforms.ChannelShuffle))
 --------------
 
 1. Original image
@@ -117,15 +118,13 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ChannelShuffle image](images/augs_examples/ChannelShuffle.jpg)
 
-
-[ToGray]([ToGray](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.ToGray))
+[ToGray]([ToGray](https://albumentations.ai/docs/api_reference/full_reference/?h=togray#albumentations.augmentations.transforms.ToGray))
 ------
 
 1. Original image
 2. `ToGray(p=1)`
 
 ![ToGray image](images/augs_examples/ToGray.jpg)
-
 
 [InvertImg]([InvertImg](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.InvertImg))
 ---------
@@ -136,7 +135,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 ![InvertImg image](images/augs_examples/InvertImg.jpg)
 
 
-[VerticalFlip]([VerticalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.VerticalFlip))
+[VerticalFlip]([VerticalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.VerticalFlip))
 ------------
 
 1. Original image
@@ -144,8 +143,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![VerticalFlip image](images/augs_examples/VerticalFlip.jpg)
 
-
-[HorizontalFlip]([HorizontalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.HorizontalFlip))
+[HorizontalFlip]([HorizontalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.VerticalFlip))
 --------------
 
 1. Original image
@@ -153,7 +151,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![HorizontalFlip image](images/augs_examples/HorizontalFlip.jpg)
 
-[Flip]([Flip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Flip))
+[Flip]([Flip](https://albumentations.ai/docs/api_reference/full_reference/?h=flip#albumentations.augmentations.geometric.transforms.Flip))
 ----
 
 1. Original image
@@ -163,7 +161,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![Flip image](images/augs_examples/Flip.jpg)
 
-[RandomGridShuffle]([RandomGridShuffle](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.RandomGridShuffle))
+[RandomGridShuffle]([RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=randomgridshuffle#albumentations.augmentations.transforms.RandomGridShuffle))
 -----------------
 
 1. Original image
@@ -173,7 +171,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![RandomGridShuffle image](images/augs_examples/RandomGridShuffle.jpg)
 
-[Blur]([Blur](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.Blur))
+[Blur]([Blur](https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/?h=blur#albumentations.augmentations.blur.transforms.Blur))
 ----
 
 1. Original image
