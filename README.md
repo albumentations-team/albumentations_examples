@@ -24,6 +24,7 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_xymasking.ipynb) [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_mixup.ipynb) [mixup.ipynb](notebooks/example_mixup.ipynb). How to apply [MixUp](https://albumentations.ai/docs/api_reference/augmentations/mixing).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_chromatic_aberration.ipynb) [example_chromatic_aberration.ipynb](notebooks/example_chromatic_aberration.ipynb). How to apply ChromaticAberration.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
 
 ## Usage examples
 
@@ -49,7 +50,7 @@ def strong_aug(p=0.5):
             MedianBlur(blur_limit=3, p=0.1),
             Blur(blur_limit=3, p=0.1),
         ], p=0.2),
-        ShiftScaleRotate(shift_limit=0.0625, scale_limit=0.2, rotate_limit=45, p=0.2),
+        Affine(translate_percent=0.0625, scale=(0.8, 1.2), rotate_limit=(-45, 45), p=0.2),
         OneOf([
             OpticalDistortion(p=0.3),
             GridDistortion(p=0.1)
@@ -143,7 +144,6 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 2. `VerticalFlip(p=1)`
 
 ![VerticalFlip image](images/augs_examples/VerticalFlip.jpg)
-
 
 [HorizontalFlip]([HorizontalFlip](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.HorizontalFlip))
 --------------
