@@ -32,7 +32,7 @@ For detailed examples, see [notebooks](https://github.com/albumentations-team/al
 
 ```python
 from albumentations import (
-    HorizontalFlip, ShiftScaleRotate, CLAHE, RandomRotate90,
+    HorizontalFlip, Affine, CLAHE, RandomRotate90,
     Transpose, ShiftScaleRotate, Blur, OpticalDistortion, GridDistortion, HueSaturationValue,
     GaussNoise, MotionBlur, MedianBlur,
     RandomBrightnessContrast, Flip, OneOf, Compose
