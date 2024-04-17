@@ -1,10 +1,12 @@
+from typing import List
+
 import albumentations as A
 import cv2
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-def visualize(image, keypoints, bboxes):
+def visualize(image: np.ndarray, keypoints: List[List[float]], bboxes: List[List[float]]) -> np.ndarray:
     overlay = image.copy()
     for kp in keypoints:
         cv2.circle(overlay, (int(kp[0]), int(kp[1])), 20, (0, 200, 200), thickness=2, lineType=cv2.LINE_AA)
@@ -15,7 +17,7 @@ def visualize(image, keypoints, bboxes):
     return overlay
 
 
-def main():
+def main() -> None:
     image = cv2.imread("images/image_1.jpg")
 
     keypoints = cv2.goodFeaturesToTrack(
