@@ -11,8 +11,14 @@ ci:
   submodules: false
 
 repos:
+  - repo: https://github.com/ayasyrev/nbmetaclean
+    rev: 0.0.8
+    hooks:
+    - id: nbclean
+      name: nbclean
+      entry: nbclean
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -45,7 +51,7 @@ repos:
       types: [python]
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.3.5
+    rev: v0.3.7
     hooks:
       # Run the linter.
       - id: ruff
