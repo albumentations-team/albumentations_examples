@@ -24,6 +24,7 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_xymasking.ipynb) [xy_transform.ipynb](notebooks/example_xymasking.ipynb). How to apply [XYMasking](https://albumentations.ai/docs/api_reference/augmentations/dropout/xy_masking/#xymasking-augmentation-augmentationsdropoutxy_masking).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_mixup.ipynb) [mixup.ipynb](notebooks/example_mixup.ipynb). How to apply [MixUp](https://albumentations.ai/docs/api_reference/augmentations/mixing).
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_chromatic_aberration.ipynb) [example_chromatic_aberration.ipynb](notebooks/example_chromatic_aberration.ipynb). How to apply ChromaticAberration.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_d4.ipynb) [example_d4.ipynb](notebooks/example_d4.ipynb). How to apply D4 transform.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
 
 ## Usage examples
@@ -33,7 +34,7 @@ For detailed examples, see [notebooks](https://github.com/albumentations-team/al
 ```python
 from albumentations import (
     HorizontalFlip, Affine, CLAHE, RandomRotate90,
-    Transpose, ShiftScaleRotate, Blur, OpticalDistortion, GridDistortion, HueSaturationValue,
+    Transpose, Blur, OpticalDistortion, GridDistortion, HueSaturationValue,
     GaussNoise, MotionBlur, MedianBlur,
     RandomBrightnessContrast, Flip, OneOf, Compose
 )
