@@ -27,6 +27,8 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_d4.ipynb) [example_d4.ipynb](notebooks/example_d4.ipynb). How to apply [D4](https://albumentations.ai/docs/api_reference/full_reference/?h=d4#albumentations.augmentations.geometric.transforms.D4) transform.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_gridshuffle.ipynb) [example_gridshuffle.ipynb](notebooks/example_gridshuffle.ipynb). How to apply [RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=randomgrid#albumentations.augmentations.transforms.RandomGridShuffle) transform.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_hfhub.ipynb) [example_hfhub.ipynb](notebooks/example_hfhub.ipynb). How to load and save augmentation pipeline to HuggungFace Hub.
+
 
 ## Usage examples
 
@@ -34,25 +36,22 @@ For detailed examples, see [notebooks](https://github.com/albumentations-team/al
 
 ```python
 from albumentations import (
-    HorizontalFlip, Affine, CLAHE, RandomRotate90,
-    Transpose, Blur, OpticalDistortion, GridDistortion, HueSaturationValue,
+    Affine, CLAHE,Blur, OpticalDistortion, GridDistortion, HueSaturationValue,
     GaussNoise, MotionBlur, MedianBlur,
-    RandomBrightnessContrast, Flip, OneOf, Compose
+    RandomBrightnessContrast, D4, OneOf, Compose
 )
 import numpy as np
 
 def strong_aug(p=0.5):
     return Compose([
-        RandomRotate90(),
-        Flip(),
-        Transpose(),
+        D4(),
         GaussNoise(),
         OneOf([
             MotionBlur(p=0.2),
             MedianBlur(blur_limit=3, p=0.1),
             Blur(blur_limit=3, p=0.1),
         ], p=0.2),
-        Affine(translate_percent=0.0625, scale=(0.8, 1.2), rotate_limit=(-45, 45), p=0.2),
+        Affine(translate_percent=0.0625, scale=(0.8, 1.2), rotate=(-45, 45), p=0.2),
         OneOf([
             OpticalDistortion(p=0.3),
             GridDistortion(p=0.1)
