@@ -28,8 +28,8 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_gridshuffle.ipynb) [example_gridshuffle.ipynb](notebooks/example_gridshuffle.ipynb). How to apply [RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=randomgrid#albumentations.augmentations.transforms.RandomGridShuffle) transform.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_hfhub.ipynb) [example_hfhub.ipynb](notebooks/example_hfhub.ipynb). How to load and save augmentation pipeline to HuggungFace Hub.
-- - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_OverlayElements.ipynb) [example_documents.ipynb](notebooks/example_OverlayElements.ipynb). How to apply OverlayElements to update text on the image
-
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_OverlayElements.ipynb) [example_documents.ipynb](notebooks/example_OverlayElements.ipynb). How to apply OverlayElements to update text on the image
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_textimage.ipynb) [example_textimage.ipynb](notebooks/example_textimage.ipynb). How to add text to the image
 
 ## Usage examples
 
