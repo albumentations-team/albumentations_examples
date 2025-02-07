@@ -33,9 +33,10 @@ def main() -> None:
     plt.show()
 
     aug = A.Compose(
-        [A.ShiftScaleRotate(scale_limit=0.1, shift_limit=0.2, rotate_limit=10, always_apply=True)],
+        [A.ShiftScaleRotate(scale_limit=0.1, shift_limit=0.2, rotate_limit=10)],
         bbox_params=A.BboxParams(format="pascal_voc", label_fields=["bbox_labels"]),
         keypoint_params=A.KeypointParams(format="xy"),
+        strict=True,
     )
 
     for _i in range(10):
