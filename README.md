@@ -7,7 +7,6 @@ or
 2. Submit an issue to the [main repository of Albumentations](https://github.com/albumentations-team/albumentations/issues)
 
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example.ipynb) [example.ipynb](notebooks/example.ipynb). Defining a simple augmentation pipeline for image augmentation.
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_16_bit_tiff.ipynb) [example_16_bit_tiff.ipynb](notebooks/example_16_bit_tiff.ipynb). Working with non-8-bit images.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_bboxes.ipynb) [example_bboxes.ipynb](notebooks/example_bboxes.ipynb). Using Albumentations to augment bounding boxes for object detection tasks.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_bboxes2.ipynb) [example_bboxes2.ipynb](notebooks/example_bboxes2.ipynb). How to use Albumentations for detection tasks if you need to keep all bounding boxes.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_kaggle_salt.ipynb) [example_kaggle_salt.ipynb](notebooks/example_kaggle_salt.ipynb). Using Albumentations for a semantic segmentation task.
@@ -27,7 +26,7 @@ or
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_gridshuffle.ipynb) [example_gridshuffle.ipynb](notebooks/example_gridshuffle.ipynb). How to apply [RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=randomgrid#albumentations.augmentations.transforms.RandomGridShuffle) transform.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_documents.ipynb) [example_documents.ipynb](notebooks/example_documents.ipynb). How to apply Morphological, both erosion and dilation.
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_hfhub.ipynb) [example_hfhub.ipynb](notebooks/example_hfhub.ipynb). How to load and save augmentation pipeline to HuggungFace Hub.
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_OverlayElements.ipynb) [example_documents.ipynb](notebooks/example_OverlayElements.ipynb). How to apply OverlayElements to update text on the image
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_OverlayElements.ipynb) [example_OverlayElements.ipynb](notebooks/example_OverlayElements.ipynb). How to apply OverlayElements to update text on the image
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/albumentations-team/albumentations_examples/blob/main/notebooks/example_textimage.ipynb) [example_textimage.ipynb](notebooks/example_textimage.ipynb). How to add text to the image
 
 ## Usage examples
@@ -61,7 +60,7 @@ def strong_aug(p=0.5):
             RandomBrightnessContrast(),
         ], p=0.3),
         HueSaturationValue(p=0.3),
-    ], p=p)
+    ], p=p, seed=137, strict=True)
 
 image = np.ones((300, 300, 3), dtype=np.uint8)
 mask = np.ones((300, 300), dtype=np.uint8)
@@ -74,7 +73,8 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ## Augmentations examples
 
-[MultiplicativeNoise]([MultiplicativeNoise](https://albumentations.ai/docs/api_reference/full_reference/?h=multiplicativenoise#albumentations.augmentations.transforms.MultiplicativeNoise))
+
+[MultiplicativeNoise](https://explore.albumentations.ai/transform/MultiplicativeNoise)
 -------------------
 
 1. Original image
@@ -86,7 +86,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![MultiplicativeNoise image](images/augs_examples/MultiplicativeNoise.jpg)
 
-[ToSepia]([ToSepia](https://albumentations.ai/docs/api_reference/full_reference/?h=tosepia#albumentations.augmentations.transforms.ToSepia))
+[ToSepia](https://explore.albumentations.ai/transform/ToSepia)
 -------
 
 1. Original image
@@ -94,7 +94,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ToSepia image](images/augs_examples/ToSepia.jpg)
 
-[ChannelDropout]([ChannelDropout](https://albumentations.ai/docs/api_reference/augmentations/dropout/channel_dropout/?h=channeld#channeldropout-augmentation-augmentationsdropoutchannel_dropout))
+[ChannelDropout](https://explore.albumentations.ai/transform/ChannelDropout)
 --------------
 
 1. Original image
@@ -109,7 +109,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ChannelDropout image](images/augs_examples/ChannelDropout.jpg)
 
-[ChannelShuffle]([ChannelShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=channelshu#albumentations.augmentations.transforms.ChannelShuffle))
+[ChannelShuffle](https://explore.albumentations.ai/transform/ChannelShuffle)
 --------------
 
 1. Original image
@@ -119,7 +119,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ChannelShuffle image](images/augs_examples/ChannelShuffle.jpg)
 
-[ToGray]([ToGray](https://albumentations.ai/docs/api_reference/full_reference/?h=togray#albumentations.augmentations.transforms.ToGray))
+[ChannelShuffle](https://explore.albumentations.ai/transform/ChannelShuffle)
 ------
 
 1. Original image
@@ -127,7 +127,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![ToGray image](images/augs_examples/ToGray.jpg)
 
-[InvertImg]([InvertImg](https://albumentations.readthedocs.io/en/latest/api/augmentations.html#albumentations.augmentations.transforms.InvertImg))
+[InvertImg](https://explore.albumentations.ai/transform/InvertImg)
 ---------
 
 1. Original image
@@ -136,7 +136,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 ![InvertImg image](images/augs_examples/InvertImg.jpg)
 
 
-[VerticalFlip]([VerticalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.VerticalFlip))
+[VerticalFlip](https://explore.albumentations.ai/transform/VerticalFlip)
 ------------
 
 1. Original image
@@ -144,7 +144,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![VerticalFlip image](images/augs_examples/VerticalFlip.jpg)
 
-[HorizontalFlip]([HorizontalFlip](https://albumentations.ai/docs/api_reference/full_reference/?h=vertical#albumentations.augmentations.geometric.transforms.HorizontalFlip))
+[HorizontalFlip](https://explore.albumentations.ai/transform/HorizontalFlip)
 --------------
 
 1. Original image
@@ -152,17 +152,9 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![HorizontalFlip image](images/augs_examples/HorizontalFlip.jpg)
 
-[Flip]([Flip](https://albumentations.ai/docs/api_reference/full_reference/?h=flip#albumentations.augmentations.geometric.transforms.Flip))
 ----
 
-1. Original image
-2. `Flip(p=1)`
-3. `Flip(p=1)`
-4. `Flip(p=1)`
-
-![Flip image](images/augs_examples/Flip.jpg)
-
-[RandomGridShuffle]([RandomGridShuffle](https://albumentations.ai/docs/api_reference/full_reference/?h=randomgridshuffle#albumentations.augmentations.transforms.RandomGridShuffle))
+[RandomGridShuffle](https://explore.albumentations.ai/transform/RandomGridShuffle)
 -----------------
 
 1. Original image
@@ -172,7 +164,7 @@ image, mask, whatever_data, additional = augmented["image"], augmented["mask"], 
 
 ![RandomGridShuffle image](images/augs_examples/RandomGridShuffle.jpg)
 
-[Blur]([Blur](https://albumentations.ai/docs/api_reference/augmentations/blur/transforms/?h=blur#albumentations.augmentations.blur.transforms.Blur))
+[Blur](https://explore.albumentations.ai/transform/Blur)
 ----
 
 1. Original image

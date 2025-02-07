@@ -33,13 +33,13 @@ def main() -> None:
     plt.show()
 
     aug = A.Compose(
-        [A.ShiftScaleRotate(scale_limit=0.1, shift_limit=0.2, rotate_limit=10)],
+        [A.Affine(scale=0.5, shear=10, translate_percent=0.2, rotate=10)],
         bbox_params=A.BboxParams(format="pascal_voc", label_fields=["bbox_labels"]),
         keypoint_params=A.KeypointParams(format="xy"),
         strict=True,
     )
 
-    for _i in range(10):
+    for _ in range(10):
         data = aug(image=image, keypoints=keypoints, bboxes=bboxes, bbox_labels=np.ones(len(bboxes)))
 
         aug_image = data["image"]
