@@ -56,8 +56,8 @@ exclude = [
 line-length = 120
 indent-width = 4
 
-# Assume Python 3.8
-target-version = "py38"
+# Assume Python 3.9.
+target-version = "py39"
 
 [tool.ruff.lint]
 explicit-preview-rules = true
