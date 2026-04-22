@@ -160,3 +160,5 @@ fabric.properties
 conda_build/
 
 .DS_Store
+
+data/
